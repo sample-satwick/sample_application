@@ -1,1 +1,8 @@
-ifnanffnkfnklfm
+- hosts: all
+  tasks:
+  - name: creating user
+    user: name=john state=present
+  - name: creating file
+    file: name=file123 state=touch
+  - name: install httpd
+    yum: name=httpd state=installed
